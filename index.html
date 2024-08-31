@@ -1,49 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo Básico de HTML y CSS</title>
+    <title>Compra tu Propiedad en [Nombre de la Empresa]</title>
+
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Encuentra la propiedad de tus sueños con [Nombre de la Empresa]. Ofrecemos terrenos, casas y departamentos en las mejores ubicaciones.">
+    <meta name="keywords" content="inmobiliaria, compra de terrenos, compra de casas, departamentos, bienes raíces">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.tusitio.com/landing-inmobiliaria">
+
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="Compra tu Propiedad en [Nombre de la Empresa]">
+    <meta property="og:description" content="Encuentra la propiedad de tus sueños con [Nombre de la Empresa].">
+    <meta property="og:image" content="https://www.tusitio.com/images/og-image.jpg">
+    <meta property="og:url" content="https://www.tusitio.com/landing-inmobiliaria">
+    <meta property="og:type" content="website">
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID'); 
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Estilos CSS -->
     <style>
-        /* Estilos CSS */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
         }
 
         .container {
-            background-color: white;
+            max-width: 1200px;
+            margin: auto;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px 0;
             text-align: center;
         }
 
         h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            margin-top: 0;
             color: #4CAF50;
         }
 
-        p {
-            font-size: 18px;
+        .form-group {
+            margin-bottom: 15px;
         }
 
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 16px;
+            box-sizing: border-box;
         }
 
-        .button:hover {
-            background-color: #45a049;
+        .form-group input[type="submit"] {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
-   
+
+        .form-group input[type="submit"]:hover {
+            background: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>[Nombre de la Empresa]</h1>
+            <p>Encuentra la propiedad de tus sueños con nosotros.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>Solicita más información</h2>
+            <p>Déjanos tus datos y te contactaremos para ofrecerte las mejores opciones en propiedades.</p>
+
+            <form action="https://www.tusitio.com/form-handler" method="POST">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 [Nombre de la Empresa]. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
